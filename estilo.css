@@ -1,0 +1,14 @@
+
+body{
+    background:  url(https://media.giphy.com/media/12vJgj7zMN3jPy/giphy.gif) no-repeat center center fixed; 
+     background-size: cover;
+    background-color:#2F9B8C;
+}
+
+.jumbotron{
+    background-color:#fff;
+    border-radius:3px;
+}
+.container {
+          box-shadow: 0 0 30px black;
+        }
