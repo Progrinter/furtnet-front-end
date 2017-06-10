@@ -1,15 +1,14 @@
-var express = require("express");
+var express = require('express');
+
+
 var app = express();
+   app.set('view engine','ejs');
+   app.set("views","./");
+  app.use(express.static(('./')));
 
-    app.set('view engine','ejs');
-    app.use(express.static('views'));
-    
+
     app.get("/",function(req,res){
-       
-        res.render('index');
-
+        res.render("index");
     });
 
-
-
-app.listen(3000);
+app.listen('3030');
