@@ -1,39 +1,73 @@
+<div class="col-md-6">
+    <img src="images\furtnet.jpg" style="width:15%"></img>
+</div>
+<div class="col-md-6">
+
+    <form class="navbar-form navbar-right" action="/#!/psicologo/perf">
+
+        <input class="form-control" type="text" placeholder="Login" />
+        <input class="form-control" type="password" placeholder="Senha" />
+        <input type="submit" value="Acessar" class="btn btn-primary " />
+</div>
+</form>
+</div>
+
+<div class="col-xs-12" style="height:30px;"></div>
+
+<div class="col-md-8">
+    <center style="color:#fff">
+        <h1>Seja Bem vindo a Furtnet!</h1>
+        <h1>Crie a sua conta,você é:</h1>
+        <div>
+            <a href="/#!/psicologo/new"><button  class="btn btn-primary"  >Psicólogo</button></a>
+            <a href="/#!/"><button  class="btn btn-primary" >Usuário</button></a>
+        </div>
+        <br/>
+    </center>
+</div>
 <div class="col-md-3 jumbotron container">
-            <h2>Cadastre-se</h2>    
-            <h4>Cadastro psicólogo</h4>
-            <label>Nome:</label>
-            <input class="form-control" type="text" placeholder="Digite seu nome" id="nome" />
-            <label>CRP:</label>
-            <input class="form-control" type="text" placeholder="Digite seu codigo CRP" id="crp" />
-            
-            <div class="col-md-8">
-    <label>Genero:</label>
-                 <input type="radio" name="genero" value="masc">Masc</input>
-                    <input type="radio" name="genero" value="fem">Fem</input><br/>
-             </div>
-             <div class="col-md-4">
-            <label>Idade:</label>
-            <input type="number" class="form-control"  />
-            </div>
-
-
-            <label>Formação:</label>
-            <input class="form-control" type="text" placeholder="Digite sua formação" id="formação" />
-            <label>Email:</label>
-            <input class="form-control" type="text" placeholder="exemplo@exemplo.com" id="email" />
-            <label>CPF:</label>
-            <input class="form-control" type="text" placeholder="000.000.000-00" id="cpf" />
-            <div class="col-md-6">
-        <label>Senha:</label>
-    <input class="form-control" type="password" placeholder="Sua senha" id="senha" />
+    <h2>Cadastre-se</h2>
+    <h4>Cadastro usuário</h4>
+    <label>Nome:</label>
+    <input class="form-control" type="text" placeholder="Digite seu nome" id="nome" />
+    <div class="col-md-6">
+        <label>Idade:</label>
+        <input type="number" class="form-control" placeholder="Sua idade" />
     </div>
     <div class="col-md-6">
-    <label>Confirme:</label>
-    <input class="form-control" type="password" placeholder="senha" />
+        <label>Estado Civil:</label>
+        <select class="form-control" name="estado_civil">
+                        <option value="solteiro">Solteiro</option>
+                        <option value="Casado">Casado/a</option>
+                    </select>
+    </div> <br/>
+    <label>Tomando Medicação:</label>
+    <input type="radio" name="medicacao" value="sim">Sim </input>
+    <input type="radio" name="medicacao" value="nao">Nao </input><br/>
+
+    <div class="col-md-6">
+        <label>Cidade:</label>
+        <select class="form-control" name="cidade">               
+    </select>
     </div>
-            <br/>
-            <div class="col-xs-12" style="height:50px;"></div>
-            <center>
-            <p><a class="btn btn-primary btn-lg col-md-12" href="#" role="button">Cadastrar</a></p>
-            </center>
-        </div>
+    <div class="col-md-6">
+        <label>Estado:</label>
+        <select class="form-control" name="estado">  
+    </select>
+    </div>
+    <label>Email:</label>
+    <input class="form-control" type="email" placeholder="exemplo@exemplo.com" id="nome" />
+    <div class="col-md-6">
+        <label>Senha:</label>
+        <input class="form-control" type="password" placeholder="Sua senha" id="senha" />
+    </div>
+    <div class="col-md-6">
+        <label><Confirme></Confirme>Confirme:</label>
+        <input class="form-control" type="password" placeholder="senha" />
+    </div>
+    <div class="col-xs-12" style="height:50px;"></div>
+    <p><a class="btn btn-primary btn-lg col-md-12 " href="#" role="button">Cadastrar</a></p>
+
+</div>
+
+<div class="col-md-1"></div>

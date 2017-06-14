@@ -1,4 +1,4 @@
-angular.module("appfurtnet",['diretivasFurtnet','ngRoute'])
+angular.module("appfurtnet",['ngRoute'])
 .config(function($routeProvider){
 
     $routeProvider.when('/',{
@@ -9,6 +9,11 @@ angular.module("appfurtnet",['diretivasFurtnet','ngRoute'])
         templateUrl: 'js/directives/psicologo-painel.html', 
     });
 
+    $routeProvider.when('/psicologo/perf',{
+        templateUrl: 'js/directives/perfil-psicologo.html', 
+    });
+        
+        
 
 });
 

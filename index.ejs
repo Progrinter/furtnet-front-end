@@ -3,55 +3,30 @@
     <link rel="stylesheet" href="style\bootstrap\css\bootstrap.min.css" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="style\bootstrap\js\bootstrap.min.js" ></script>
-    
-    <script src="node_modules\angular\angular.js"></script>
-    <script src="js\directives\furtnet-diretivas.js"></script>
+    <script src="node_modules\angular\angular.js"></script> 
+    <script src="node_modules\angular-route\angular-route.js"></script>
     <script src="js\modules\furtnet-principal.js"></script>
     <script src="js\controllers\controler-login.js"></script>    
-    <script src="node_modules\angular-route\angular-route.js"></script>
+    <link rel="stylesheet" href="style\estilo.css">
+    
+    
+
 
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style\estilo.css">
+    
     <head>
         <title>Furtnet</title>
 
     </head>
-    <body ng-app="appfurtnet" >
+    <body ng-app="appfurtnet">
 
-        <div class="col-md-6">
-            <img src="images\furtnet.jpg" style="width:15%"></img>
-        </div>
-        <div class="col-md-6">
-            
-            <form class="navbar-form navbar-right">
-                
-                <input class="form-control" type="text" placeholder="Login"/>
-                <input  class="form-control" type="password" placeholder="Senha"/>
-                <input type="submit" value="Acessar" class="btn btn-primary "/>
-                </div>
-            </form>
-        </div>
-        
-        <div class="col-xs-12" style="height:30px;"></div>
-     
-        <div class="col-md-8">
-            <center style="color:#fff">
-            <h1>Seja Bem vindo a Furtnet!</h1>
-            <h1>Crie a sua conta,você é:</h1>
-               <div>
-        <a href="/#!/"><button  class="btn btn-primary"  >Psicólogo</button></a>
-            <a href="/#!/psicologo/new"><button  class="btn btn-primary" >Usuário</button></a>
-            </div>
-            <br/>
-            </center>
-        </div>
+       
         
           
             <!-- aqui vao as telas  -->
             
             <ng-view></ng-view>
 
-        <div class="col-md-1"></div>
 
     </body>
 </html>

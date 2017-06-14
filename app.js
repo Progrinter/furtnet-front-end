@@ -11,4 +11,9 @@ var app = express();
         res.render("index");
     });
 
+    app.get("/teste",function(req,res){
+        res.render("perfil-psicologo");
+    });
+
+
 app.listen('3030');
