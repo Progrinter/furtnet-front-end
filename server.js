@@ -18,5 +18,5 @@ var io = require('socket.io')(http);
 
 
 http.listen(process.env.PORT || 8080, function(){
-  console.log('listening on', http.address().port);
+  console.log('listening on', process.env.PORT|| 8080);
 });
