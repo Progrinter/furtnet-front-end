@@ -8,7 +8,7 @@ var app = express();
 
 
     app.get("/",function(req,res){
-        res.render("home");
+        res.render("home")
     });
 
     app.get("/teste",function(req,res){
@@ -16,4 +16,6 @@ var app = express();
     });
 
 
-app.listen('3030');
+http.listen(process.env.PORT || 3000, function(){
+  console.log('listening on', http.address().port);
+});
