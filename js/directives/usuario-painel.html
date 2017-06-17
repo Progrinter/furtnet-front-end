@@ -25,7 +25,7 @@
         <br/>
     </center>
 </div>
-<div class="col-md-3 jumbotron container">
+<div class="col-md-3 jumbotron container" ng-controller="cids-est">
     <h2>Cadastre-se</h2>
     <h4>Cadastro usuário</h4>
     <label>Nome:</label>
@@ -47,12 +47,12 @@
 
     <div class="col-md-6">
         <label>Cidade:</label>
-        <select class="form-control" name="cidade">               
+        <select class="form-control" ng-model="selecionadoCidades" ng-options="x for x in cidades" name="cidade">               
     </select>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" >
         <label>Estado:</label>
-        <select class="form-control" name="estado">  
+        <select class="form-control" ng-model="selecionadoEstado" ng-options="x for x in estados" name="estado">  
     </select>
     </div>
     <label>Email:</label>
