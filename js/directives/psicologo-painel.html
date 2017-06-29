@@ -5,12 +5,12 @@
 <div class="col-md-6">
 
     <form class="navbar-form navbar-right" action="/#!/psicologo/perf">
-
+        <label style="color: white;">Acesse sua conta:</label>
         <input class="form-control" type="text" placeholder="Login" />
         <input class="form-control" type="password" placeholder="Senha" />
         <input type="submit" value="Acessar" class="btn btn-primary " />
+    </form>
 </div>
-</form>
 </div>
 </div>
 <div class="col-md-12" style="background-color:#daf4d7">
@@ -21,7 +21,7 @@
         <h1>Seja Bem vindo a Furtnet!</h1>
         <h1>Crie a sua conta,você é:</h1>
         <div>
-            <a href="/#!/psicologo/new"><button  class="btn btn-primary"  >Psicólogo</button></a>
+            <a href="/#!/psicologo/new"><button  class="btn btn-primary" >Psicólogo</button></a>
             <a href="/#!/"><button  class="btn btn-primary" >Usuário</button></a>
         </div>
         <br/>
@@ -30,36 +30,43 @@
 
 <div class="col-md-3 jumbotron container" ng-controller="cids-est">
     <h2>Cadastre-se </h2>
-    <h4>Cadastro psicólogo</h4>
-    <label>Nome:</label>
-    <input class="form-control" type="text" placeholder="Digite seu nome" id="nome" />
-    <label>CRP:</label>
-    <input class="form-control" type="text" placeholder="Digite seu codigo CRP" id="crp" />
-
-    <div class="col-md-8">
+    <h4>Cadastro para psicólogos</h4>
+    <div class="col-md-12">
+        <label>Nome:</label>
+        <input class="form-control" type="text" placeholder="Digite seu nome" id="nome" />
+    </div>
+    <div class="col-md-12">
+        <label>Email:</label>
+        <input class="form-control" type="text" placeholder="exemplo@exemplo.com" id="email" />
+    </div>
+    <div class="col-md-12">
+        <label>Formação:</label>
+        <input class="form-control" type="text" placeholder="Digite sua formação" id="formação" />
+    </div>
+    <div class="col-md-12">
+        <label>CRP:</label>
+        <input class="form-control" type="text" placeholder="Digite seu CRP" id="crp" />
+    </div>
+    <div class="col-md-6">
         <label>Genero:</label>
-        <input type="radio" name="genero" value="masc">Masc</input>
-        <input type="radio" name="genero" value="fem">Fem</input><br/>
+        <select class="form-control">
+            <option value="Selecione">Selecione</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Outro</option>
+        </select>
     </div>
-    <div class="col-md-4">
-        <label>Idade:</label>
-        <input type="number" class="form-control" />
-    </div>
-
-
-    <label>Formação:</label>
-    <input class="form-control" type="text" placeholder="Digite sua formação" id="formação" />
-    <label>Email:</label>
-    <input class="form-control" type="text" placeholder="exemplo@exemplo.com" id="email" />
-    <label>CPF:</label>
-    <input class="form-control" type="text" placeholder="000.000.000-00" id="cpf" />
     <div class="col-md-6">
+        <label>Nascimento:</label>
+        <input type="Data" class="form-control" placeholder="__/__/____" />
+    </div>
+    <div class="col-md-12">
         <label>Senha:</label>
-        <input class="form-control" type="password" placeholder="Sua senha" id="senha" />
+        <input class="form-control" type="password" placeholder="Digite sua senha" id="senha" />
     </div>
-    <div class="col-md-6">
-        <label>Confirme:</label>
-        <input class="form-control" type="password" placeholder="senha" />
+    <div class="col-md-12">
+        <label>Confirme sua Senha:</label>
+        <input class="form-control" type="password" placeholder="Digite novamente a senha" />
     </div>
     <br/>
     <div class="col-xs-12" style="height:50px;"></div>
