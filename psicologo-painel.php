@@ -1,0 +1,79 @@
+<div class="col-md-12" style="background-color:#2F9B8C">
+<div class="col-md-6">
+    <img src="images\furtnet.jpg" style="width:15%"></img>
+</div>
+<div class="col-md-6">
+
+    <form class="navbar-form navbar-right" action="/#!/psicologo/perf">
+        <label style="color: white;">Acesse sua conta:</label>
+        <input class="form-control" type="text" placeholder="E-mail" />
+        <input class="form-control" type="password" placeholder="Senha" />
+        <input type="submit" value="Acessar" class="btn btn-primary " />
+    </form>
+</div>
+</div>
+</div>
+<div class="col-md-12" style="background-color:#daf4d7">
+<div class="col-xs-12" style="height:30px;"></div>
+
+<div class="col-md-8">
+    <center style="color:#000">
+        <h1>Seja Bem vindo a Furtnet!</h1>
+        <h1>Crie a sua conta,você é:</h1>
+        <div>
+            <a href="/#!/psicologo/new"><button  class="btn btn-primary" >Psicólogo</button></a>
+            <a href="/#!/"><button  class="btn btn-primary" >Usuário</button></a>
+        </div>
+        <br/>
+    </center>
+</div>
+
+<div class="col-md-3 jumbotron container" ng-controller="cids-est">
+    <h2>Cadastre-se </h2>
+    <h4>Cadastro para psicólogos</h4>
+    <div class="col-md-12">
+        <label>Nome:</label>
+        <input class="form-control" type="text" placeholder="Digite seu nome" id="nome" />
+    </div>
+    <div class="col-md-12">
+        <label>Email:</label>
+        <input class="form-control" type="text" placeholder="exemplo@exemplo.com" id="email" />
+    </div>
+    <div class="col-md-12">
+        <label>Formação:</label>
+        <input class="form-control" type="text" placeholder="Digite sua formação" id="formação" />
+    </div>
+    <div class="col-md-12">
+        <label>CRP:</label>
+        <input class="form-control" type="text" placeholder="Digite seu CRP" id="crp" />
+    </div>
+    <div class="col-md-6">
+        <label>Genero:</label>
+        <select class="form-control">
+            <option value="Selecione">Selecione</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Outro</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label>Nascimento:</label>
+        <input type="Data" class="form-control" placeholder="__/__/____" />
+    </div>
+    <div class="col-md-12">
+        <label>Senha:</label>
+        <input class="form-control" type="password" placeholder="Digite sua senha" id="senha" />
+    </div>
+    <div class="col-md-12">
+        <label>Confirme sua Senha:</label>
+        <input class="form-control" type="password" placeholder="Digite novamente a senha" />
+    </div>
+    <br/>
+    <div class="col-xs-12" style="height:50px;"></div>
+    <center>
+        <p><a class="btn btn-primary btn-lg col-md-12" href="#" role="button">Cadastrar</a></p>
+    </center>
+</div>
+
+<div class="col-md-1"></div>
+</div>
