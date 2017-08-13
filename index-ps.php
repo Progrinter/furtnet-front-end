@@ -12,7 +12,7 @@
     <h2>Cadastre-se </h2>
     <h4>Cadastro para psicólogos</h4>
     <ul id=erros style="color:#ff0000; list-style: none;"></ul>
-    <form action="login.php" method="post" id="form">
+    <form action="cadastro-psicologo.php" method="post" id="form">
     <div class="col-md-12">
         <label>Nome:</label>
         <input class="form-control" type="text" placeholder="Digite seu nome" name="nome" />

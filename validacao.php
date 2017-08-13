@@ -1,5 +1,6 @@
 <?php
 
+
     /* Código que vai na index.php e na psico-login.php
      *
      * include "validacao.php";
@@ -56,7 +57,6 @@
     
     */
     
-
     function valida()
     {
         if(strlen(utf8_decode($_POST["nome"])) < 3)
