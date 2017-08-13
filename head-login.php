@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Furtnet</title>
+<link rel="shortcut icon" href="images/favicon.jpg">
 <link rel="stylesheet" type="text/css" href="style\bootstrap\css\bootstrap.css">
 <link rel="stylesheet" type="text/css" href="style\bootstrap\css\bootstrap.css">
 <meta charset="utf-8">
@@ -12,11 +13,12 @@
     </div>
     <div class="col-md-6">
 
-        <form class="navbar-form navbar-right" action="perfil-usuario.php" method="post">
+        <form class="navbar-form navbar-right" action="login.php" method="post">
             <label style="color: white;">Acesse sua conta:</label>
             <input class="form-control" type="text" placeholder="E-mail" name="email" />
             <input class="form-control" type="password" placeholder="Senha" name="password" />
             <input type="submit" value="Acessar" class="btn btn-primary " />
+
         </form>
     </div>
 </div>

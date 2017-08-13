@@ -1,7 +1,8 @@
 <html>
-<head><?php $nome = $_POST['email']; ?><?php $nome = $_POST['nome']; ?>
+<head>
 <title><?php echo $nome; ?> - Furtnet</title>
 <meta charset="utf-8">
+<link rel="shortcut icon" href="images/favicon.jpg">
 <link rel="stylesheet" type="text/css" href="style\bootstrap\css\bootstrap.css">
 <link rel="stylesheet" type="text/css" href="style\bootstrap\estilo.css">
 </head>
