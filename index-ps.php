@@ -11,7 +11,7 @@
 <div class="col-md-3 jumbotron container" style="background-color: white;">
     <h2>Cadastre-se </h2>
     <h4>Cadastro para psicólogos</h4>
-    <form action="login.php" method="post">
+    <form action="cadastro-psicologo.php" method="post">
     <div class="col-md-12">
         <label>Nome:</label>
         <input class="form-control" type="text" placeholder="Digite seu nome" name="nome" />

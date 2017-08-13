@@ -1,5 +1,5 @@
 <html>
-<head><?php $nome = $_POST['email']; ?>
+<head><?php $nome = $_POST['nome']; ?>
 <title><?php echo $nome; ?> - Furtnet</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="style\bootstrap\css\bootstrap.css">
