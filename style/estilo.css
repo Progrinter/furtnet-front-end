@@ -1,0 +1,14 @@
+
+
+body{
+
+    background-color:#fff;
+}
+
+.jumbotron{
+    background-color:#fff;
+    border-radius:3px;
+}
+.container {
+          box-shadow: 0 0 30px black;
+        }
