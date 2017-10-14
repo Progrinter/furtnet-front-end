@@ -9,5 +9,9 @@
 	$db = "furtnet";
 	$login = "root";
 	$pass = "";
+<<<<<<< HEAD
 	$table = "";
+=======
+	$table = "usuario";
+>>>>>>> 592cc1a37c968768438676575db75ea9a156a75c
 ?>

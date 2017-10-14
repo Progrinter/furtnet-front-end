@@ -14,7 +14,11 @@
             <img src="images\furtnet.jpg" style="width:15%"></img>
         </div>
         <div class="col-md-6">
+<<<<<<< HEAD
             <form class="navbar-form navbar-right" action="login.php" method="post">
+=======
+            <form class="navbar-form navbar-right" action="cdb/login.php" method="post">
+>>>>>>> 592cc1a37c968768438676575db75ea9a156a75c
                 <label style="color: white;">Acesse sua conta:</label>
                 <input class="form-control" type="text" placeholder="E-mail" name="email" />
                 <input class="form-control" type="password" placeholder="Senha" name="password" />
@@ -33,6 +37,7 @@
             </div>
         <div class="col-md-3 jumbotron container" align="left" style="background-color: white;">
             <div class="col-md-12">
+<<<<<<< HEAD
                 <h3>Tipo de Cadastro:</h3>
             </div>
             <ul id=erros style="color:#ff0000; list-style: none;"></ul>
@@ -44,6 +49,23 @@
                         <option value="1">Psicólogo</option>
                     </select>
                 </div>
+=======
+                <h3>Tipo de acesso:</h3>
+            </div>
+            <div class="col-md-4 seletor" align="center">
+                <label for="usuario">Usuário</label>
+                <input type="radio" name="tipo" value="0" id="usuario">
+            </div>
+
+            <div class="col-md-3"></div>
+
+            <div class="col-md-4 seletor" align="center">
+                <label for="psicologo">Psicólogo</label>
+                <input type="radio" name="tipo" value="1" id="psicologo">
+            </div>
+            <ul id=erros style="color:#ff0000; list-style: none;"></ul>
+            <form action="cadastro-usuario.php" method="post" id="form">
+>>>>>>> 592cc1a37c968768438676575db75ea9a156a75c
                 <h3>Cadastre-se</h3>
                 <div class="col-md-12">
                     <label>Nome:</label>
