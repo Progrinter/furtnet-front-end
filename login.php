@@ -1,30 +1,28 @@
 <?php
+	session_start();
 	include "cdb/config.php";
-	include "cdb/dados.php";
+	include "cdb/dados-login.php";
 
 	$connection = mysqli_connect($host, $login, $pass, $db);
-	$selectUser = "SELECT email from usuario where email='$email' AND senha='$password'";
-	$selectPsi = "SELECT email from psicologo where email='$email' AND senha='$password'";
+	$selectUser = "SELECT email from usuario where email='$loginUser' AND senha='$password'";
+	$selectPsi = "SELECT email from psicologo where email='$loginUser' AND senha='$password'";
 
-	$busca = mysqli_query($connection,$select);
-	$lista = mysqli_fetch_row($busca);
+	$buscaUser = mysqli_query($connection,$selectUser);
+	$listaUser = mysqli_fetch_row($buscaUser);
 
-	if($lista > 1) {
-		buscaTipo($connection,$email);
-	}else{
-		echo "<p>Usuario nao encontrado</p>";
+	$buscaPsico = mysqli_query($connection,$selectPsi);
+	$listaPsico = mysqli_fetch_row($buscaPsico);
+
+	if($listaUser > 1) {
+		$_SESSION["0"];
+		$_SESSION["logon"];
+		header("location:home.php");
 	}
-
-	function buscaTipo($connection,$email) {
-		$buscaUser = "SELECT tipo from usuario where email='$email'";
-		$listaUser = mysqli_query($connection,$buscaUser);
-		$resultado = mysqli_fetch_row($listaUser);
-		
-		if($resultado == "0") {
-			header("location:perfil-usuario.php");
-		}
-		if($resultado == "1") {
-			header("location:perfil-usuario.php");
-		}
+	if($listaPsico > 1) {
+		$_SESSION["1"];
+		$_SESSION["logon"];
+		header("location:home.php");
+	}else{
+		session_destroy();
 	}
 ?>

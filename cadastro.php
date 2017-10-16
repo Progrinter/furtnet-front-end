@@ -1,7 +1,8 @@
 <?php
 	include "cdb/config.php";
-	include "cdb/dados.php";	
+	include "cdb/dados.php";
 
+	define("ADICIONAIS","location:adicionais.php");
 	$connection = mysqli_connect($host, $login, $pass, $db);
 	$selectUser = "SELECT email FROM usuario WHERE email='$email'";
 	$selectPsi = "SELECT email FROM psicologo WHERE email='$email'";
@@ -27,7 +28,12 @@
 		}else{
 			$query = "INSERT into $table (nome, genero, data, email, senha, tipo) values ('$nome', '$genero', '$data', '$email', '$senha', '$tipo')";
 			mysqli_query($connection,$query);
-			header("Location:laudo.php");
+			header(ADICIONAIS);
+			$_SESSION[$email];
+			$_SESSION['logon'];
+			setcookie("Nome",$nome);
+			setcookie("Email",$email);
+			setcookie("Tipo",$tipo);
 		}
 	}
 ?>
