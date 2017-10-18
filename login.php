@@ -1,28 +1,39 @@
 <?php
-	session_start();
 	include "cdb/config.php";
-	include "cdb/dados-login.php";
+	$logon = $_POST['logon'];
+	$password = $_POST['password'];
+	$link = "location:home.php";
 
 	$connection = mysqli_connect($host, $login, $pass, $db);
-	$selectUser = "SELECT email from usuario where email='$loginUser' AND senha='$password'";
-	$selectPsi = "SELECT email from psicologo where email='$loginUser' AND senha='$password'";
+	$queryUser = "SELECT email, senha FROM usuario WHERE email='$logon' AND senha='$password'";
+	$buscaUser = mysqli_query($connection,$queryUser);
+	$resultUser = mysqli_fetch_row($buscaUser);
 
-	$buscaUser = mysqli_query($connection,$selectUser);
-	$listaUser = mysqli_fetch_row($buscaUser);
+	$queryPsico = "SELECT email,senha FROM psicologo WHERE email='$logon' AND senha='$password'";
+	$buscaPsico = mysqli_query($connection,$queryPsico);
+	$resultPsico = mysqli_fetch_row($buscaPsico);
 
-	$buscaPsico = mysqli_query($connection,$selectPsi);
-	$listaPsico = mysqli_fetch_row($buscaPsico);
-
-	if($listaUser > 1) {
-		$_SESSION["0"];
-		$_SESSION["logon"];
-		header("location:home.php");
+	if($resultUser >= 1) {
+		$query = "SELECT tipo FROM usuario WHERE email='$logon' AND senha='$password'";
+		$busca = mysqli_query($connection,$query);
+		$resultado = mysqli_fetch_row($busca);
+		foreach ($resultado as $key => $value) {
+			$tipo = $value;
+		}
+		setcookie("Tipo",$tipo);
+		setcookie("Login",$logon);
+		header($link);
 	}
-	if($listaPsico > 1) {
-		$_SESSION["1"];
-		$_SESSION["logon"];
-		header("location:home.php");
-	}else{
-		session_destroy();
+	if($resultPsico >= 1) {
+		$query = "SELECT tipo FROM psicologo WHERE email='$logon' AND senha='$password'";
+		$busca = mysqli_query($connection,$query);
+		$resultado = mysqli_fetch_row($busca);
+		foreach ($resultado as $key => $value) {
+			$tipo = $value;
+		}
+		setcookie("Login",$logon);
+		setcookie("Tipo",$tipo);
+		header($link);
 	}
+
 ?>

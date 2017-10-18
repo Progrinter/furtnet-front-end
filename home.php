@@ -1,13 +1,10 @@
 <?php
-	session_start();
+	$tipo = $_COOKIE['Tipo'];
 
-	if($_SESSION['logon'] || $_SESSION['0']) {
+	if ($tipo == "0") {
 		include "templates/home-user.php";
 	}
-
-	if($_SESSION['logon'] || $_SESSION['1']) {
+	if($tipo == "1") {
 		include "templates/home-psico.php";
-	}else{
-		session_destroy();
-		header("location:login.php");
 	}
+?>

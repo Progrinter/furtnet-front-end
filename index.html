@@ -2,8 +2,7 @@
     <head>
         <title>Furtnet</title>
         <link rel="shortcut icon" href="images/favicon.jpg">
-        <link rel="stylesheet" type="text/css" href="style\bootstrap\css\bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="style\bootstrap\css\bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="style/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="style/estilo.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,12 +10,13 @@
 <body>
     <div class="col-md-12" style="background-color:#2F9B8C">
         <div class="col-md-6">
-            <img src="images\furtnet.jpg" style="width:15%"></img>
+            <a href="index.php"><img src="images\furtnet.jpg" style="width:15%"></img></a>
         </div>
         <div class="col-md-6">
+
             <form class="navbar-form navbar-right" action="login.php" method="post">
                 <label style="color: white;">Acesse sua conta:</label>
-                <input class="form-control" type="text" placeholder="E-mail" name="email" />
+                <input class="form-control" type="text" placeholder="E-mail" name="logon" />
                 <input class="form-control" type="password" placeholder="Senha" name="password" />
                 <input type="submit" value="Acessar" class="btn btn-primary button"/>
             </form>
@@ -36,6 +36,7 @@
                 <h3>Tipo de Cadastro:</h3>
             </div>
             <ul id=erros style="color:#ff0000; list-style: none;"></ul>
+            
             <form action="cadastro.php" method="post" id="form">
                 <div class="col-md-12">
                     <label>Selecione:</label>
@@ -82,6 +83,6 @@
 
         </div>
     </div>
-    <!--<script src="scripts/validacao.js"></script>-->
+    <script src="scripts/validacao.js"></script>
 </body>
 </html>

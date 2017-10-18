@@ -28,12 +28,13 @@
 		}else{
 			$query = "INSERT into $table (nome, genero, data, email, senha, tipo) values ('$nome', '$genero', '$data', '$email', '$senha', '$tipo')";
 			mysqli_query($connection,$query);
-			header(ADICIONAIS);
 			$_SESSION[$email];
 			$_SESSION['logon'];
 			setcookie("Nome",$nome);
 			setcookie("Email",$email);
 			setcookie("Tipo",$tipo);
+			setcookie("Genero",$genero);
+			header(ADICIONAIS);
 		}
 	}
 ?>
