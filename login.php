@@ -21,7 +21,7 @@
 			$tipo = $value;
 		}
 		setcookie("Tipo",$tipo);
-		setcookie("Login",$logon);
+		setcookie("Logon",$logon);
 		header($link);
 	}
 	if($resultPsico >= 1) {
@@ -31,7 +31,7 @@
 		foreach ($resultado as $key => $value) {
 			$tipo = $value;
 		}
-		setcookie("Login",$logon);
+		setcookie("Logon",$logon);
 		setcookie("Tipo",$tipo);
 		header($link);
 	}
