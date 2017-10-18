@@ -28,8 +28,9 @@
 		}else{
 			$query = "INSERT into $table (nome, genero, data, email, senha, tipo) values ('$nome', '$genero', '$data', '$email', '$senha', '$tipo')";
 			mysqli_query($connection,$query);
-			$_SESSION[$email];
-			$_SESSION['logon'];
+			session_start();
+			$_SESSION['email'] = $email;
+			$_SESSION['logon'] = "logado";
 			setcookie("Nome",$nome);
 			setcookie("Email",$email);
 			setcookie("Tipo",$tipo);

@@ -26,7 +26,7 @@
 <body>
 	<div class="col-md-12" style="background-color:#2F9B8C">
         <div class="col-md-6">
-            <a href="index.php"><img src="images\furtnet.jpg" style="width:15%"></img></a>
+            <a href="index.html"><img src="images\furtnet.jpg" style="width:15%"></img></a>
         </div>
     </div>
 	<div class="col-md-12" style="background-color: #daf4d7; height: 100%; size: 100%;">
