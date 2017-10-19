@@ -10,3 +10,7 @@
 .perfil .col-md-12:hover {
 	background-color: white;
 }
+
+.border-layout {
+	border: 1 solid black;
+}
