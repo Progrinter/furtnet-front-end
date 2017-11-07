@@ -1,0 +1,16 @@
+.perfil a{
+	color: inherit;
+}
+
+.perfil a:hover{
+	text-decoration: none;
+	background-color: white;
+}
+
+.perfil .col-md-12:hover {
+	background-color: white;
+}
+
+.border-layout {
+	border: 1 solid black;
+}

@@ -10,5 +10,43 @@ body{
     border-radius:3px;
 }
 .container {
-          box-shadow: 0 0 30px black;
-        }
+    box-shadow: 0 0 30px black;
+ }
+
+.content-index {
+	background-color:#daf4d7;
+	height: 100%;
+	background-image: url(../images/2549.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;"
+}
+
+.content-index h1, h2 {
+	color: white;
+	font-family: Arial;
+
+}
+
+.options label {
+	font-family: Arial;
+	size: 20px;
+}
+
+.button {
+	background-color: #2F9B8C;
+	border-color: #2F9B8C;
+}
+
+.btn-primary:hover {
+	background-color: #2F9B8C;
+}
+
+.seletor {
+	background-color:#2F9B8C;
+	color: white;
+	font-family: Arial;
+}
+
+.seletor input[type="radio"] {
+	visibility: hidden;
+}
