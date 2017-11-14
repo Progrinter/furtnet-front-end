@@ -34,7 +34,7 @@
 			$_SESSION['nome'] = $nome;
 			$_SESSION['tipo'] = $tipo;
 			$_SESSION['genero'] = $genero;
-			$_SESSION['senha'] = $senha;
+			$_SESSION['password'] = $senha;
 			header(ADICIONAIS);
 		}
 	}
