@@ -1,5 +1,6 @@
 <?php
-	$nome = $_COOKIE['Nome'];
+
+	$nome = $_SESSION['nome'];
 ?>
 <!DOCTYPE html>
 <html>

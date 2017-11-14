@@ -1,6 +1,8 @@
 <?php
 	include "cdb/config.php";
 
+	$logon = $_SESSION['logon'];
+	
 	$connection = mysqli_connect($host,$login,$pass,$db);
 	$query = "SELECT nome,user_id FROM usuario WHERE email='$logon'";
 	$busca = mysqli_query($connection,$query);

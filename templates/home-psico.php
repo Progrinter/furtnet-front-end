@@ -1,7 +1,7 @@
 <?php
 	include "cdb/config.php";
 
-  $_COOKIE['logon'];
+  $logon = $_SESSION['logon'];
 
 	$connection = mysqli_connect($host,$login,$pass,$db);
 	$query = "SELECT psico_id,nome,genero,tipo FROM psicologo WHERE email='$logon'";
@@ -12,7 +12,6 @@
 	$nome = $lista[1];
   $genero = $lista[2];
   $tipo = $lista[3];
-  echo $id;
 
   $_SESSION['tipo'] = $tipo;
 

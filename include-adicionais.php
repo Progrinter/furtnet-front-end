@@ -2,7 +2,8 @@
 	session_start();
 	include "cdb/config.php";
 
-	$tipo = $_COOKIE['Tipo'];
+
+	$tipo = $_SESSION['tipo'];
 
 	if ($tipo == "0") {
 		include "cdb/adicional-user.php";
@@ -12,17 +13,17 @@
 		$_SESSION['logon'] = $email;
 		$_SESSION['tipo'] = $tipo;
 		$_SESSION['status'] = true;
-		header("location:home.php");
+		header("location:login.php");
 	}
 	if ($tipo == "1") {
 		include "cdb/adicional-psico.php";
 		$connection = mysqli_connect($host,$login,$pass,$db);
 		$query = "UPDATE psicologo SET cpf='$cpf', crp='$crp', formacao='$formacao', instituicao='$instituicao', cursos='$cursos', experiencia='$experiencia', status='1' WHERE email='$email'";
 		mysqli_query($connection,$query);
-		setcookie('logon',$email);
+		$_SESSION['logon'] = $email;
 		$_SESSION['tipo'] = $tipo;
 		$_SESSION['status'] = true;
-		header("location:home.php");
+		header("location:login.php");
 	}else{
 		die();
 		header("location:index.php");
