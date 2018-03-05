@@ -60,7 +60,7 @@
 		<div class="col-md-6" style="background-color: white">
 			<div class="col-md-6">&nbsp;</div>
 			<div class="col-md-12" style="border-bottom: 1px solid #2F9B8C; border-top: 1px solid #2F9B8C;">
-				<?php echo "<a href=delete.php?id=$id><h3>Deletar sua conta</h3></a>"?>
+				<?php echo "<a href=excluir.php?id=$id><h3>Deletar sua conta</h3></a>"?>
 			</div>
 		</div>
 		<div class="col-md-3" style="background-color: #daf4d7">

@@ -13,12 +13,9 @@
 	$_SESSION['id'] = $id;
 	$_SESSION['nome'] = $nome;
 
-  //segunda parte
-  $postagens = "SELECT post FROM posts WHERE email='$logon'";
-  $result = mysqli_query($connection,$postagens);
-  $vetor = mysqli_fetch_assoc($result);
+	$perfil = "<a href=perfil.php?id=$id><h3>$nome</h3></a>";
 
-	$perfil = "<a href=perfil.php?id=$id><h3>$nome</h3></a>"
+  
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,7 +77,7 @@
 					<div class="col-md-6">&nbsp;</div>
 					<div class="col-md-9">
 						<label>Como você está se sentindo:</label>
-						<textarea class="form-control" rows="5" cols="12" name="texto"></textarea>
+						<textarea class="form-control" rows="5" cols="12" name="texto" placeholder="Diga, como está?"></textarea>
 					</div>
 					<div class="col-md-9">&nbsp;</div>
 					<div class="col-md-6">
@@ -89,16 +86,34 @@
 					<div class="col-md-9">&nbsp;</div>
 				</form>
 			</div>
-
+        <?php
+        //postagens
+        $queryPostagem = "SELECT id, postagem, data FROM posts WHERE user='$logon' ORDER BY data DESC";
+        $executaBusca = mysqli_query($connection,$queryPostagem);
+        while($rowBusca = mysqli_fetch_array($executaBusca)){
+          //echo $rowBusca['postagem'] . "<br>";
+          $data = $rowBusca['data'];
+          $postagem = $rowBusca['postagem'];
+          $post = $rowBusca['id'];
+          echo '
+            <div class="col-md-12" style="border-bottom: 1px solid #2F9B8C; border-bottom: 1px solid #2F9B8C;">
+              <div class="col-md-9">
+                <h5>' . $nome . '</h5>
+                <p>' . $data . '</p>
+                <h4>' . $postagem . '</h4>
+                <a href=delete.php?id='.$post.'><h8>Excluir</h8></a>
+              </div>
+            </div>
+          ';
+        }
+      ?>
 		</div>
 		<div class="col-md-3" style="background-color: #daf4d7">
-      <?php
-        echo $vetor;
-      ?>
 			&nbsp;<br>
 			&nbsp;<br>
 			&nbsp;<br>
 		</div>
 	</div>
+  
 </body>
 </html>
