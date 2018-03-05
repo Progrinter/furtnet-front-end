@@ -13,6 +13,11 @@
 	$_SESSION['id'] = $id;
 	$_SESSION['nome'] = $nome;
 
+  //segunda parte
+  $postagens = "SELECT post FROM posts WHERE email='$logon'";
+  $result = mysqli_query($connection,$postagens);
+  $vetor = mysqli_fetch_assoc($result);
+
 	$perfil = "<a href=perfil.php?id=$id><h3>$nome</h3></a>"
 ?>
 <!DOCTYPE html>
@@ -71,11 +76,11 @@
 		<div class="col-md-6" style="background-color: white">
 			<div class="col-md-6">&nbsp;</div>
 			<div class="col-md-12" style="border-bottom: 1px solid #2F9B8C; border-top: 1px solid #2F9B8C;">
-				<form action="post.php">
+				<form action="post.php" method="post">
 					<div class="col-md-6">&nbsp;</div>
 					<div class="col-md-9">
 						<label>Como você está se sentindo:</label>
-						<textarea class="form-control" rows="5" cols="12" name="posts"></textarea>
+						<textarea class="form-control" rows="5" cols="12" name="texto"></textarea>
 					</div>
 					<div class="col-md-9">&nbsp;</div>
 					<div class="col-md-6">
@@ -84,19 +89,12 @@
 					<div class="col-md-9">&nbsp;</div>
 				</form>
 			</div>
-			<!--<?php/*
-				$query = "SELECT post FROM postagens WHERE id='$id'";
-				$busca = mysqli_query($connection,$query);
-				$posts = mysqli_fetch_row($busca);
 
-				foreach ($posts as $key => $value) {
-					echo 
-						"<div class=col-md-6>
-							<h3>" . $value . "</h3>"
-				}
-			*/?>-->
 		</div>
 		<div class="col-md-3" style="background-color: #daf4d7">
+      <?php
+        echo $vetor;
+      ?>
 			&nbsp;<br>
 			&nbsp;<br>
 			&nbsp;<br>
